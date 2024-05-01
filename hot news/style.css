@@ -1,0 +1,30 @@
+h1 {
+    color: #ff5733;
+    font-size: 36px; 
+    font-weight: bold; 
+}
+
+p {
+    color: #333; /* Warna teks */
+    font-size: 16px; 
+    line-height: 1.6; 
+}
+
+/* Gaya untuk kartu iklan */
+.card {
+    border: 1px solid #ccc; /* Border kartu */
+    border-radius: 10px; /* Border radius */
+}
+
+/* Gaya untuk tombol "Tautan" */
+.btn-primary {
+    background-color: #ff5733; /* Warna latar belakang tombol */
+    border-color: #ff5733; /* Warna border tombol */
+    color: #fff; /* Warna teks tombol */
+}
+
+/* Gaya untuk footer */
+footer {
+    background-color: #333; /* Warna latar belakang footer */
+    color: #fff; /* Warna teks footer */
+}
