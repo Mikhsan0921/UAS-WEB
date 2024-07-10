@@ -4,76 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>about</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../recomended/recommended.css">
 </head>
 <body>
     <!-- NAVBAR /HEADER -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary"  >
-        <div class="container-fluid">
-          <a class="navbar-brand" href="/recomended/rekom.html">Nama Brand</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/hot news/hotnews.html">Hot News</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/men/men.html">Man</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/women/women.html">Women</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/about/about.html">About Me</a>
-              </li>
-            </ul>
+  <div>
+    <nav class="navbar">
+      <div>
+        <a href="../recomended/recommended.html" class="brand">
+          <div class="teks1">SAN</div>
+          <div class="teks2">Cloth</div>           
+        </a>
+      </div>
+      <ul class="list">   
+        <li>
+          <a href="../hot news/hotnews.html" class="item">
+            Hot News
+          </a>
+        </li>
+        <li>
+          <a href="../men/men.html" class="item">
+            Men
+          </a>
+        </li>
+        <li>
+          <a href="../women/women.html" class="item">
+              Women
+          </a>
+        </li>
+        <li>
+          <a href="../about/about.html" class="item">
+              About Me
+          </a>
+        </li>
+        <form role="search">
+          <input class="input" type="search" placeholder="Search">
+          <button class="cari" type="submit">Search</button>
+        </form>
+        <div class="dropdown">
+          <button class="material-icons">person</button>
+          <div class="dropdown-content">
+              <a href="">Profile</a>
+              <a href="../login.php">Logout</a>
           </div>
-          <form class="d-flex"  role="search" >
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>    
         </div>
-      </nav>
-      <!-- NAVBAR /HEADER -->
-      
+      </ul>
+    </nav>
+
+      <script src="recommended.js"></script>
+  </div>
+    <!-- NAVBAR /HEADER -->
       <!-- CARD / CONTENT -->
       <div class="container mt-4">
         <div class="judul">
           <h1>Shirt</h1>
           <a href="">View All</a>
         </div>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card mb-3">
+      <div class="barang">
+        <div class="tabel">
+          <div class="produk">
               <a class="link" href="https://id.shp.ee/eWL9tyF">
-                  <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98w-lltmk9qtua44a2" class="card-img-top" alt="Outfit 1">
+                  <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98w-lltmk9qtua44a2" class="gambar" alt="Outfit 1">
                   <div class="card-body">
-                      <h5 class="card-title">Rp130.000</h5>
-                      <p class="card-text">PHOMPPHIESS Jacket Tracktop Jaket Vintage Pria Wanita Premium</p>
+                      <h5 class="price">Rp130.000</h5>
+                      <p class="deskripsi">PHOMPPHIESS Jacket Tracktop Jaket Vintage Pria Wanita Premium</p>
                   </div>
               </a>
           </div>
       </div>
-        <div class="col-md-4">
-          <div class="card mb-3">
+        <div class="tabel">
+          <div class="produk">
             <a class="link" href="https://id.shp.ee/eWL9tyF">
-              <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98w-lltmk9qtua44a2" class="card-img-top" alt="Outfit 2">
+              <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98w-lltmk9qtua44a2" class="gambar" alt="Outfit 2">
               <div class="card-body">
-                <h5 class="card-title">Rp130.000</h5>
-                <p class="card-text">PHOMPPHIESS Jacket Tracktop Jaket Vintage Pria Wanita Premium</p>
+                <h5 class="price">Rp130.000</h5>
+                <p class="deskripsi">PHOMPPHIESS Jacket Tracktop Jaket Vintage Pria Wanita Premium</p>
               </div>
             </a>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card mb-3">
+        <div class="tabel">
+          <div class="produk">
             <a class="link" href="https://id.shp.ee/4rDrf6P">
-              <img src="https://down-id.img.susercontent.com/file/sg-11134201-23020-yaad740uzynv83" class="card-img-top" alt="Outfit 3">
+              <img src="https://down-id.img.susercontent.com/file/sg-11134201-23020-yaad740uzynv83" class="gambar" alt="Outfit 3">
               <div class="card-body">
-                <h5 class="card-title">364.000 - Rp563.000</h5>
-                <p class="card-text">Owners Knitwear Sweaters Oversized - Cubism</p>
+                <h5 class="price">364.000 - Rp563.000</h5>
+                <p class="deskripsi">Owners Knitwear Sweaters Oversized - Cubism</p>
               </div>
             </a>
           </div>
@@ -85,36 +102,36 @@
           <h1>Pants</h1>
           <a href="">View All</a>
         </div>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card mb-3">
+      <div class="barang">
+        <div class="tabel">
+          <div class="produk">
             <a class="link" href="https://id.shp.ee/JKTQnGT">
-              <img src="https://down-id.img.susercontent.com/file/0345e396b5354fa444f72787401f0549" class="card-img-top" alt="Outfit 1">
+              <img src="https://down-id.img.susercontent.com/file/0345e396b5354fa444f72787401f0549" class="gambar" alt="Outfit 1">
               <div class="card-body">
-                <h5 class="card-title">Rp229.000</h5>
-                <p class="card-text">Kappa Celana Panjang Jogger KJ4LP103 Lyrids - BKBKWE</p>
+                <h5 class="price">Rp229.000</h5>
+                <p class="deskripsi">Kappa Celana Panjang Jogger KJ4LP103 Lyrids - BKBKWE</p>
               </div>
             </a>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card mb-3">
+        <div class="tabel">
+          <div class="produk">
             <a class="link" href="https://id.shp.ee/nsJiXaM">
-              <img src="https://down-id.img.susercontent.com/file/265e132a47778be5ac66232196a6d256" class="card-img-top" alt="Outfit 2">
+              <img src="https://down-id.img.susercontent.com/file/265e132a47778be5ac66232196a6d256" class="gambar" alt="Outfit 2">
               <div class="card-body">
-                <h5 class="card-title">Rp89.000</h5>
-                <p class="card-text">Wellborn Boardshort Ebony</p>
+                <h5 class="price">Rp89.000</h5>
+                <p class="deskripsi">Wellborn Boardshort Ebony</p>
               </div>
             </a>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card mb-3">
+        <div class="tabel">
+          <div class="produk">
             <a class="link" href="https://id.shp.ee/Ncrapia">
-              <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98s-lsmqrmgrymo61a" class="card-img-top" alt="Outfit 3">
+              <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98s-lsmqrmgrymo61a" class="gambar" alt="Outfit 3">
               <div class="card-body">
-                <h5 class="card-title">Rp159.300</h5>
-                <p class="card-text">FROYEMUL - LIGHT GREY Trousers</p>
+                <h5 class="price">Rp159.300</h5>
+                <p class="deskripsi">FROYEMUL - LIGHT GREY Trousers</p>
               </div>
             </a>
           </div>
@@ -126,36 +143,36 @@
           <h1>Shoes</h1>
           <a href="">View All</a>
         </div>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card mb-3">
+      <div class="barang">
+        <div class="tabel">
+          <div class="produk">
             <a class="link" href="https://id.shp.ee/cY99x6t">
-              <img src="https://down-id.img.susercontent.com/file/8b821167ec2c28f947738426d6b5b656" class="card-img-top" alt="Outfit 1">
+              <img src="https://down-id.img.susercontent.com/file/8b821167ec2c28f947738426d6b5b656" class="gambar" alt="Outfit 1">
               <div class="card-body">
-                <h5 class="card-title">Rp107.900 - Rp113.980</h5>
-                <p class="card-text">Sepatu Thunderbear - Slip On Voltaire Off White CB</p>
+                <h5 class="price">Rp107.900 - Rp113.980</h5>
+                <p class="deskripsi">Sepatu Thunderbear - Slip On Voltaire Off White CB</p>
               </div>
             </a>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card mb-3">
+        <div class="tabel">
+          <div class="produk">
             <a class="link" href="https://id.shp.ee/pRGB2Sk">
-              <img src="https://down-id.img.susercontent.com/file/id-11134201-7r98t-lt4nw648miqp2d" class="card-img-top" alt="Outfit 2">
+              <img src="https://down-id.img.susercontent.com/file/id-11134201-7r98t-lt4nw648miqp2d" class="gambar" alt="Outfit 2">
               <div class="card-body">
-                <h5 class="card-title">Rp302.900 - Rp364.000</h5>
-                <p class="card-text">Sepatu Boots Pria Portee Goods Original Derby Boots</p>
+                <h5 class="price">Rp302.900 - Rp364.000</h5>
+                <p class="deskripsi">Sepatu Boots Pria Portee Goods Original Derby Boots</p>
               </div>
             </a>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card mb-3">
+        <div class="tabel">
+          <div class="produk">
             <a class="link" href="https://id.shp.ee/1Ejq2GK">
-              <img src="https://down-id.img.susercontent.com/file/f60050a43abcdef185cc09eb7ac81e21" class="card-img-top" alt="Outfit 3">
+              <img src="https://down-id.img.susercontent.com/file/f60050a43abcdef185cc09eb7ac81e21" class="gambar" alt="Outfit 3">
               <div class="card-body">
-                <h5 class="card-title">Rp16.500</h5>
-                <p class="card-text">Verlido Sandal Gunung Pria B002 Outdoor</p>
+                <h5 class="price">Rp16.500</h5>
+                <p class="deskripsi">Verlido Sandal Gunung Pria B002 Outdoor</p>
               </div>
             </a>
           </div>
@@ -167,36 +184,36 @@
           <h1>Accessories</h1>
           <a href="">View All</a>
         </div>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card mb-3">
+      <div class="barang">
+        <div class="tabel">
+          <div class="produk">
             <a class="link" href="https://id.shp.ee/YrdoHyB">
-              <img src="https://down-id.img.susercontent.com/file/id-11134207-7quky-lhmdw57fqdic32" class="card-img-top" class="card-img-top" alt="Outfit 1">
+              <img src="https://down-id.img.susercontent.com/file/id-11134207-7quky-lhmdw57fqdic32" class="gambar" class="gambar" alt="Outfit 1">
               <div class="card-body">
-                <h5 class="card-title">Rp117.000</h5>
-                <p class="card-text">ELNIRO Gelang Rantai Pria GALLA Real Titanium Bracelets Pria Asli ANTI Karat & Pudar [B.1]</p>
+                <h5 class="price">Rp117.000</h5>
+                <p class="deskripsi">ELNIRO Gelang Rantai Pria GALLA Real Titanium Bracelets Pria Asli ANTI Karat & Pudar [B.1]</p>
               </div>
             </a>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card mb-3">
+        <div class="tabel">
+          <div class="produk">
             <a class="link" href="https://id.shp.ee/fFJMyiA">
-              <img src="https://down-id.img.susercontent.com/file/sg-11134201-22110-y0u2d73rdakvc4" class="card-img-top" alt="Outfit 2">
+              <img src="https://down-id.img.susercontent.com/file/sg-11134201-22110-y0u2d73rdakvc4" class="gambar" alt="Outfit 2">
               <div class="card-body">
-                <h5 class="card-title">Rp6.500</h5>
-                <p class="card-text">3pcs Set Cincin Wanita Pria Unisex Model Marcella Angka Romawi 3 in 1 Fashion Gaya Korea / Cunci Retro Vintage / Cincin Pria Wanita</p>
+                <h5 class="price">Rp6.500</h5>
+                <p class="deskripsi">3pcs Set Cincin Wanita Pria Unisex Model Marcella Angka Romawi 3 in 1 Fashion Gaya Korea / Cunci Retro Vintage / Cincin Pria Wanita</p>
               </div>
             </a>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card mb-3">
+        <div class="tabel">
+          <div class="produk">
             <a class="link" href="https://down-id.img.susercontent.com/file/sg-11134201-22110-y0u2d73rdakvc4">
-              <img src="https://down-id.img.susercontent.com/file/id-11134207-7qul7-ljrvet3d0ubjf9" class="card-img-top" alt="Outfit 3">
+              <img src="https://down-id.img.susercontent.com/file/id-11134207-7qul7-ljrvet3d0ubjf9" class="gambar" alt="Outfit 3">
               <div class="card-body">
-                <h5 class="card-title">Rp35.500</h5>
-                <p class="card-text">Musha Water-Repellent Bracelet | Gelang Pria Gelang Wanita Gelang Tali</p>
+                <h5 class="price">Rp35.500</h5>
+                <p class="deskripsi">Musha Water-Repellent Bracelet | Gelang Pria Gelang Wanita Gelang Tali</p>
               </div>
             </a>
           </div>
@@ -205,24 +222,21 @@
       </div>
       <!-- CARD / CONTENT -->
 
-       <!--footer-->
-    <footer class="bg-dark text-center text-white mt-4">
-      <div class="container p-4">
-          <section class="mb-4">
-              <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
-              <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
-              <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
-              <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
-              <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
-              <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i></a>
-          </section>
-      </div>
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-        @2024 Hot News
-      </div>
+<!--footer-->
+  <footer class="footer">
+    <div class="containfoot">
+        <section class="link">
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i>Facebook</a>
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter">Twitter</i></a>
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i>Instagram</a>
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i>Linkedlin</a>
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i>github</a>
+        </section>
+    </div>
+    <div class="text-center" style="background-color: rgba(0, 0, 0, 0.2);">
+        @2024 Men
+    </div>
   </footer>
-  <!--footer-->
-      
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<!--footer-->
 </body>
 </html>
