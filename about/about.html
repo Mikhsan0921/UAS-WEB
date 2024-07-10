@@ -7,10 +7,35 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../recomended/recommended.css">
     <style>
-      .teks{
-      font-size: 20px;
-      padding: 20px;
-    }
+      .teks {
+        font-size: 20px;
+        padding: 20px;
+      }
+      html, body {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+      }
+      .content {
+        flex: 1;
+      }
+      .footer {
+        text-align: center;
+        padding: 1em 0;
+      }
+      .containfoot {
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+      }
+      .btn {
+        color: white;
+        text-decoration: none;
+        padding: 0.5em 1em;
+        border: 1px solid white;
+        border-radius: 5px;
+      }
     </style>
 </head>
 <body>
@@ -64,9 +89,11 @@
   <!-- HEADER -->
 
     <!-- CONTENT -->
-    <div class="teks">
-        <h1>About Me</h1>
-        <p>web ini dibuat untuk menciptakan sebuah komunitas online di sekitar web rekomendasi outfit ini, di mana pengguna dapat saling berbagi inspirasi, tips, dan pengalaman mereka dalam berpakaian. Saya percaya bahwa dengan membangun komunitas yang solid, kita dapat saling mendukung dan memperkaya pengetahuan kita tentang dunia fashion.</p>
+    <div class="content">
+        <div class="teks">
+            <h1>About Me</h1>
+            <p>Web ini dibuat untuk menciptakan sebuah komunitas online di sekitar web rekomendasi outfit ini, di mana pengguna dapat saling berbagi inspirasi, tips, dan pengalaman mereka dalam berpakaian. Saya percaya bahwa dengan membangun komunitas yang solid, kita dapat saling mendukung dan memperkaya pengetahuan kita tentang dunia fashion.</p>
+        </div>
     </div>
     <!-- CONTENT -->
 <!--footer-->
@@ -76,8 +103,8 @@
                 <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i>Facebook</a>
                 <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter">Twitter</i></a>
                 <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i>Instagram</a>
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i>Linkedlin</a>
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i>github</a>
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i>LinkedIn</a>
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i>GitHub</a>
             </section>
         </div>
         <div class="text-center" style="background-color: rgba(0, 0, 0, 0.2);">

@@ -50,7 +50,7 @@ input {
 
 button {
     padding: 10px;
-    background-color: #5cb85c;
+    background-color: crimson;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -60,7 +60,7 @@ button {
 }
 
 button:hover {
-    background-color: #4cae4c;
+    background-color: #8a0e27;
 }
 
 .message {
@@ -69,7 +69,7 @@ button:hover {
 }
 
 .message a {
-    color: #5cb85c;
+    color: crimson;
     text-decoration: none;
 }
 
