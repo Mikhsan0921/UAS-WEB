@@ -30,8 +30,10 @@ if ($result) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil Pengguna</title>
+    <link rel="stylesheet" href="recomended/recommended.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
-        body {
+        /* body {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -55,7 +57,6 @@ if ($result) {
             font-size: 20px;
         }
         .container {
-            /* height: 100vh; */
             background-color: #333;
             padding: 20px;
             border: 2px solid white;
@@ -114,35 +115,36 @@ if ($result) {
         }
         .profil .edit:hover {
             background-color: #0056b3;
-        }
+        } */
     </style>
 </head>
 <body>
-<nav class="navbar">
+    <div>
+        <nav class="navbar">
             <div>
-                <a href="../recomended/recommended.html" class="brand">
+                <a href="recomended/recommended.html" class="brand">
                     <div class="teks1">SAN</div>
                     <div class="teks2">Cloth</div>
                 </a>
             </div>
             <ul class="list">   
                 <li>
-                    <a href="../hot news/hotnews.html" class="item">
+                    <a href="hot news/hotnews.html" class="item">
                         Hot News
                     </a>
                 </li>
                 <li>
-                    <a href="../men/men.html" class="item">
+                    <a href="men/men.html" class="item">
                         Men
                     </a>
                 </li>
                 <li>
-                    <a href="../women/women.html" class="item">
+                    <a href="women/women.html" class="item">
                         Women
                     </a>
                 </li>
                 <li>
-                    <a href="../about/about.html" class="item">
+                    <a href="about/about.html" class="item">
                         About Me
                     </a>
                 </li>
@@ -153,12 +155,15 @@ if ($result) {
                 <div class="dropdown">
                     <button class="material-icons">person</button>
                     <div class="dropdown-content">
-                        <a href="../profile.php">Profile</a>
-                        <a href="../login.php">Logout</a>
+                        <a href="profile.php">Profile</a>
+                        <a href="login.php">Logout</a>
                     </div>
                 </div>
             </ul>
         </nav>
+
+        <script src="recommended.js"></script>
+    </div>
     <div class="container">
         <div class="profil">
             <h2>Selamat datang, <?php echo htmlspecialchars($username); ?>!</h2>
