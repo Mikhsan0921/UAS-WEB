@@ -1,9 +1,7 @@
 <?php
 session_start();
 
-// Periksa apakah pengguna sudah login atau belum
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
-    // Jika tidak, arahkan kembali ke halaman login
     header("Location: login.php");
     exit;
 }
@@ -43,8 +41,6 @@ if ($result) {
             border: 2px solid white;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            /* max-width: 50%; */
-            /* width: 300px; */
             height: 100vh;
         }
         .isi{
@@ -66,7 +62,6 @@ if ($result) {
         }
         .profil label {
             font-weight: bold;
-            /* margin-bottom: 50px; */
             color: white;
         }
         .profil p {
