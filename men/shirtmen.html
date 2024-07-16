@@ -12,6 +12,19 @@
             text-align: center;
             text-decoration: underline;
         }
+        .like-btn {
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
     </style>
 </head>
 <body>
@@ -45,6 +58,11 @@
               About Me
           </a>
         </li>
+        <li>
+          <a href="../like.html" class="item">
+              MyStyle
+          </a>
+        </li>
         <form role="search">
           <input class="input" type="search" placeholder="Search">
           <button class="cari" type="submit">Search</button>
@@ -76,6 +94,7 @@
                     <div class="card-body">
                       <h5 class="price">Rp130.000</h5>
                       <p class="deskripsi">PHOMPPHIESS Jacket Tracktop Jaket Vintage Pria Wanita Premium</p>
+                      <button class="like-btn" data-id="1" onclick="likeProduct(1)">Like</button>
                     </div>
                 </a>
             </div>
@@ -156,5 +175,6 @@
     </div>
   </footer>
 <!--footer-->
+  <script src="../script.js"></script>
 </body>
 </html>

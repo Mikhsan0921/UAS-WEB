@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liked Products</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <div class="judul">
+            <h1>Liked Products</h1>
+        </div>
+        <div class="barang" id="liked-products">
+            <!-- Liked products will be displayed here -->
+        </div>
+    </div>
+
+    <script>
+        // Function to display liked products
+        function displayLikedProducts() {
+            const likedProducts = getLikedProducts();
+            const productContainer = document.getElementById('liked-products');
+
+            likedProducts.forEach(productId => {
+                // Create a product card for each liked product
+                const productCard = document.createElement('div');
+                productCard.className = 'tabel';
+                productCard.innerHTML = `
+                    <div class="produk">
+                        <a class="link" href="product-page.html?product=${productId}">
+                            <!-- Replace the below img and text with dynamic content based on productId -->
+                            <img src="product-image-url" class="gambar" alt="Product">
+                            <div class="card-body">
+                                <h5 class="price">Product Price</h5>
+                                <p class="deskripsi">Product Description</p>
+                            </div>
+                        </a>
+                    </div>
+                `;
+                productContainer.appendChild(productCard);
+            });
+        }
+
+        // Call the function to display liked products on page load
+        displayLikedProducts();
+    </script>
+</body>
+</html>
