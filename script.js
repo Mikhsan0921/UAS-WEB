@@ -1,37 +1,34 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const likeButtons = document.querySelectorAll('.like-button');
-
-    likeButtons.forEach(button => {
+    const buttons = document.querySelectorAll('.add-to-mystyle');
+    buttons.forEach(button => {
         button.addEventListener('click', function() {
-            const productId = this.getAttribute('data-product-id');
-            
-            // Kirim data like ke server menggunakan AJAX atau fetch
-            fetch('like.php', {
+            const link = this.getAttribute('data-link');
+            const image = this.getAttribute('data-image');
+            const price = this.getAttribute('data-price');
+            const description = this.getAttribute('data-description');
+
+            // Send data to server
+            fetch('add_to_mystyle.php', {
                 method: 'POST',
-                body: JSON.stringify({ productId: productId }),
                 headers: {
                     'Content-Type': 'application/json'
-                }
+                },
+                body: JSON.stringify({
+                    link: link,
+                    image: image,
+                    price: price,
+                    description: description
+                })
             })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
+            .then(response => response.json())
             .then(data => {
-                // Handle response from server if needed
                 if (data.success) {
-                    alert('Product liked successfully!');
-                    // Contoh: Memperbarui UI jika diperlukan
+                    alert('Added to MyStyle successfully!');
                 } else {
-                    alert('Failed to like product: ' + data.error);
+                    alert('Failed to add to MyStyle.');
                 }
             })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('An error occurred while liking the product.');
-            });
+            .catch(error => console.error('Error:', error));
         });
     });
 });
