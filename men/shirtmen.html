@@ -96,7 +96,7 @@
                       <p class="deskripsi">PHOMPPHIESS Jacket Tracktop Jaket Vintage Pria Wanita Premium</p>
                   </div>
               </a>
-              <button class="like-btn" id="add-to-mystyle" data-link="https://id.shp.ee/eWL9tyF" data-image="https://down-id.img.susercontent.com/file/id-11134207-7r98w-lltmk9qtua44a2" data-price="Rp130.000" data-description="PHOMPPHIESS Jacket Tracktop Jaket Vintage Pria Wanita Premium">Add to MyStyle</button>
+              <button class="like-btn" data-link="https://id.shp.ee/eWL9tyF" data-image="https://down-id.img.susercontent.com/file/id-11134207-7r98w-lltmk9qtua44a2" data-price="Rp130.000" data-description="PHOMPPHIESS Jacket Tracktop Jaket Vintage Pria Wanita Premium">Add to MyStyle</button>
           </div>
         </div>
         <div class="tabel">
@@ -108,6 +108,7 @@
                 <p class="deskripsi">SCHOUTEN Kemeja Pria Sanghai Panjang Linen Khaki</p>
               </div>
             </a>
+            <button class="like-btn" id="add-to-mystyle" data-link="https://id.shp.ee/eWL9tyF" data-image="https://down-id.img.susercontent.com/file/id-11134207-7r98w-lltmk9qtua44a2" data-price="Rp130.000" data-description="PHOMPPHIESS Jacket Tracktop Jaket Vintage Pria Wanita Premium">Add to MyStyle</button>
           </div>
         </div>
         <div class="tabel">
@@ -119,6 +120,7 @@
                 <p class="deskripsi">Owners Knitwear Sweaters Oversized - Cubism</p>
               </div>
             </a>
+            <button class="like-btn" id="add-to-mystyle" data-link="https://id.shp.ee/eWL9tyF" data-image="https://down-id.img.susercontent.com/file/id-11134207-7r98w-lltmk9qtua44a2" data-price="Rp130.000" data-description="PHOMPPHIESS Jacket Tracktop Jaket Vintage Pria Wanita Premium">Add to MyStyle</button>
           </div>
         </div>
       </div>
@@ -132,6 +134,7 @@
                       <p class="deskripsi">PHOMPPHIESS Jacket Tracktop Jaket Vintage Pria Wanita Premium</p>
                     </div>
                 </a>
+                <button class="like-btn" id="add-to-mystyle" data-link="https://id.shp.ee/eWL9tyF" data-image="https://down-id.img.susercontent.com/file/id-11134207-7r98w-lltmk9qtua44a2" data-price="Rp130.000" data-description="PHOMPPHIESS Jacket Tracktop Jaket Vintage Pria Wanita Premium">Add to MyStyle</button>
             </div>
         </div>
         <div class="tabel">
@@ -143,6 +146,7 @@
                 <p class="deskripsi">SCHOUTEN Kemeja Pria Sanghai Panjang Linen Khaki</p>
               </div>
             </a>
+            <button class="like-btn" id="add-to-mystyle" data-link="https://id.shp.ee/eWL9tyF" data-image="https://down-id.img.susercontent.com/file/id-11134207-7r98w-lltmk9qtua44a2" data-price="Rp130.000" data-description="PHOMPPHIESS Jacket Tracktop Jaket Vintage Pria Wanita Premium">Add to MyStyle</button>
           </div>
         </div>
         <div class="tabel">
@@ -154,6 +158,7 @@
                 <p class="deskripsi">Owners Knitwear Sweaters Oversized - Cubism</p>
               </div>
             </a>
+            <button class="like-btn" id="add-to-mystyle" data-link="https://id.shp.ee/eWL9tyF" data-image="https://down-id.img.susercontent.com/file/id-11134207-7r98w-lltmk9qtua44a2" data-price="Rp130.000" data-description="PHOMPPHIESS Jacket Tracktop Jaket Vintage Pria Wanita Premium">Add to MyStyle</button>
           </div>
         </div>
       </div>
@@ -175,6 +180,46 @@
     </div>
   </footer>
 <!--footer-->
-  <script src="../script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const buttons = document.querySelectorAll('.like-btn');
+        buttons.forEach(button => {
+            button.addEventListener('click', function() {
+                const link = this.getAttribute('data-link');
+                const image = this.getAttribute('data-image');
+                const price = this.getAttribute('data-price');
+                const description = this.getAttribute('data-description');
+
+                console.log('Sending data:', { link, image, price, description });
+
+                fetch('add_to_mystyle.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        link: link,
+                        image: image,
+                        price: price,
+                        description: description
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Response:', data);
+                    if (data.success) {
+                        alert('Added to MyStyle successfully!');
+                    } else {
+                        alert('Failed to add to MyStyle.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Error occurred. Check console for details.');
+                });
+            });
+        });
+    });
+  </script>
 </body>
 </html>

@@ -24,11 +24,11 @@ if (isset($_POST['login'])) {
             $_SESSION['loggedin'] = true;
             $_SESSION['email'] = $email;
             $_SESSION['username'] = $user['username'];
-            
+            $_SESSION['login_success'] = 'Login berhasil!';
+
             // Redirect to recommended.html after successful login
-            header("Location: recomended/recommended.html");
+            header("Location: recomended/recommended.php");
             exit;
-            
         } else {
             $login_error = "<span style='color:red;'>Invalid email or password.</span>";
         }

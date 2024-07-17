@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,8 +9,18 @@
     <title>Recommended</title>
     <link rel="stylesheet" href="recommended.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
 </head>
 <body>
+<script>
+    // Check if session message exists and display it
+    <?php
+    if (isset($_SESSION['login_success'])) {
+        echo "alert('" . $_SESSION['login_success'] . "');";
+        unset($_SESSION['login_success']); // Clear the session message after displaying
+    }
+    ?>
+    </script>
     <div>
         <nav class="navbar">
             <div>
