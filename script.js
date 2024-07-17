@@ -1,6 +1,5 @@
-// recommended.js
 document.addEventListener('DOMContentLoaded', function() {
-    const likeButtons = document.querySelectorAll('.like-btn');
+    const likeButtons = document.querySelectorAll('.like-button');
 
     likeButtons.forEach(button => {
         button.addEventListener('click', function() {
@@ -22,10 +21,16 @@ document.addEventListener('DOMContentLoaded', function() {
             })
             .then(data => {
                 // Handle response from server if needed
-                console.log('Liked product ID:', productId);
+                if (data.success) {
+                    alert('Product liked successfully!');
+                    // Contoh: Memperbarui UI jika diperlukan
+                } else {
+                    alert('Failed to like product: ' + data.error);
+                }
             })
             .catch(error => {
                 console.error('Error:', error);
+                alert('An error occurred while liking the product.');
             });
         });
     });

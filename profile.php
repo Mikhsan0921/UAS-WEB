@@ -31,78 +31,130 @@ if ($result) {
     <link rel="stylesheet" href="recomended/recommended.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+        }
         .container {
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            background-color: white;
-            padding: 20px;
-            border: 2px solid white;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            height: 100vh;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
         }
-        .isi{
-            margin-top: 20px;
-        }
-        .profil {
-            padding: 200px;
-            text-align: center;
-            margin-top: 10px;
+        .navbar {
             background-color: #333;
-            border: 1px solid #ddd;
-            border-radius: 30px;
-
-        }
-        .profil div {
-            margin-bottom: 15px;
+            color: white;
+            display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 10px 20px;
+            border-radius: 8px 8px 0 0;
+        }
+        .brand {
+            text-decoration: none;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .list {
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+        .list li {
+            margin-right: 20px;
+        }
+        .list li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        .dropdown {
+            position: relative;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            right: 0;
+        }
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .material-icons {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .profil {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .profil h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .profil .label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
         }
         .profil label {
             font-weight: bold;
-            color: white;
         }
         .profil p {
-            margin: 0 auto;
             background-color: #f9f9f9;
             padding: 10px;
-            border: 1px solid #ddd;
             border-radius: 4px;
-            width: 10cm;
-            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
         }
-        .pass{
+        .pass {
             display: flex;
-            flex-direction: row;
+            align-items: center;
+        }
+        .pass p {
+            margin-right: 10px;
         }
         .profil button {
-            margin-left: 10px;
-            padding: 10px;
+            background-color: #007bff;
+            color: white;
             border: none;
+            padding: 10px 20px;
             border-radius: 4px;
             cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .profil button:hover {
+            background-color: #0056b3;
         }
         .logout {
-            margin-top: 100px;
+            margin-top: 20px;
         }
         .profil .out {
             background-color: crimson;
-            color: white;
-            padding: 20px;
         }
-
         .profil .out:hover {
             background-color: #8a0e27;
-        }
-        .profil .edit {
-            background-color: #007bff;
-            color: white;
-        }
-
-        .profil .edit:hover {
-            background-color: #0056b3;
         }
     </style>
 </head>
@@ -155,7 +207,7 @@ if ($result) {
     <div class="container">
         <h1>My Profile</h1>
         <div class="profil">
-            <h2>Selamat datang, <?php echo htmlspecialchars($username); ?>!</h2>
+            <h2><?php echo htmlspecialchars($username); ?>!</h2>
             <div class="isi">
                 <div class="label">
                     <label for="Email">Email</label>
