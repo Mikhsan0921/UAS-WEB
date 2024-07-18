@@ -96,7 +96,8 @@
                       <p class="deskripsi">PHOMPPHIESS Jacket Tracktop Jaket Vintage Pria Wanita Premium</p>
                   </div>
               </a>
-              <button class="like-btn" data-link="https://id.shp.ee/eWL9tyF" data-image="https://down-id.img.susercontent.com/file/id-11134207-7r98w-lltmk9qtua44a2" data-price="Rp130.000" data-description="PHOMPPHIESS Jacket Tracktop Jaket Vintage Pria Wanita Premium">Add to MyStyle</button>
+              <button onclick="like()" class="like-btn">Add to MyStyle</button>
+              <!-- data-link="https://id.shp.ee/eWL9tyF" data-image="https://down-id.img.susercontent.com/file/id-11134207-7r98w-lltmk9qtua44a2" data-price="Rp130.000" data-description="PHOMPPHIESS Jacket Tracktop Jaket Vintage Pria Wanita Premium" -->
           </div>
         </div>
         <div class="tabel">
@@ -181,45 +182,70 @@
   </footer>
 <!--footer-->
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const buttons = document.querySelectorAll('.like-btn');
-        buttons.forEach(button => {
-            button.addEventListener('click', function() {
-                const link = this.getAttribute('data-link');
-                const image = this.getAttribute('data-image');
-                const price = this.getAttribute('data-price');
-                const description = this.getAttribute('data-description');
+    function like(){
+      let link = document.querySelector('.link').href;
+      let gambar = document.querySelector('.gambar').src;
+      let price = document.querySelector('.price').innerText;
+      let deskripsi = document.querySelector('.deskripsi').innerText;
 
-                console.log('Sending data:', { link, image, price, description });
-
-                fetch('add_to_mystyle.php', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        link: link,
-                        image: image,
-                        price: price,
-                        description: description
-                    })
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Response:', data);
-                    if (data.success) {
-                        alert('Added to MyStyle successfully!');
-                    } else {
-                        alert('Failed to add to MyStyle.');
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert('Error occurred. Check console for details.');
-                });
-            });
-        });
+      fetch('add_to_mystyle.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(result => {
+        if (result.success) {
+            alert('Produk berhasil ditambahkan ke MyStyle');
+        } else {
+            alert('Gagal menambahkan produk: ' + result.message);
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
     });
+    }
+    // document.addEventListener('DOMContentLoaded', function() {
+    //     const buttons = document.querySelectorAll('.like-btn');
+    //     buttons.forEach(button => {
+    //         button.addEventListener('click', function() {
+    //             const link = this.getAttribute('data-link');
+    //             const image = this.getAttribute('data-image');
+    //             const price = this.getAttribute('data-price');
+    //             const description = this.getAttribute('data-description');
+
+    //             console.log('Sending data:', { link, image, price, description });
+
+    //             fetch('add_to_mystyle.php', {
+    //                 method: 'POST',
+    //                 headers: {
+    //                     'Content-Type': 'application/json'
+    //                 },
+    //                 body: JSON.stringify({
+    //                     link: link,
+    //                     image: image,
+    //                     price: price,
+    //                     description: description
+    //                 })
+    //             })
+    //             .then(response => response.json())
+    //             .then(data => {
+    //                 console.log('Response:', data);
+    //                 if (data.success) {
+    //                     alert('Added to MyStyle successfully!');
+    //                 } else {
+    //                     alert('Failed to add to MyStyle.');
+    //                 }
+    //             })
+    //             .catch(error => {
+    //                 console.error('Error:', error);
+    //                 alert('Error occurred. Check console for details.');
+    //             });
+    //         });
+    //     });
+    // });
   </script>
 </body>
 </html>
